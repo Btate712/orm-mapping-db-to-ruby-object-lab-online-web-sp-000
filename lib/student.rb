@@ -95,6 +95,6 @@ class Student
 
     students = DB[:conn].execute(sql)
     students.map { |row| self.new_from_db(row) }
-    binding.pry
+    self.new_from_db(students[0])
   end
 end
