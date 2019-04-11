@@ -65,7 +65,7 @@ class Student
     students.map { |row| self.new_from_db(row) }
   end
 
-  def self.all_students_below_grade_12
+  def self.students_below_grade_12
     sql = <<-SQL
       SELECT * FROM students
       WHERE grade < 12
